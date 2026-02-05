@@ -1,5 +1,36 @@
 # Argument Mining with Large Language Models
 
+This repository contains the implementation and evaluation of argument mining models using pretrained large language models (LLMs). The project focuses on an end-to-end pipeline—ranging from data preprocessing and span extraction to model training and evaluation—applied to two distinct domains:
+
+* **Argument Annotated Essays (AAE v2.0):** Persuasive essays.
+* **AbstRCT:** Biomedical abstracts.
+
+## 📂 Repository Structure
+
+```text
+LLM-Project/
+│
+├── notebook/
+│   └── argument_mining_pipeline.ipynb   # Main execution pipeline
+│
+├── data/
+│   └── raw/                             # Datasets (downloaded automatically)
+│
+├── results/
+│   ├── aae_dev_roberta_sanitized.json
+│   ├── abstrct_dev_scibert_linearidx.json
+│   ├── final_results_summary.json
+│   └── experiment_metadata.json
+│
+├── .gitignore
+└── README.md
+
+...
+```
+        Note: Raw datasets are not manually stored in this repository. They are downloaded automatically by the notebook during execution.
+
+# Argument Mining with Large Language Models
+
 This repository contains an end-to-end implementation of argument mining using
 pretrained language models on two datasets:
 
@@ -11,28 +42,6 @@ model training, and evaluation using strict and relaxed metrics.
 
 ---
 
-## Repository Structure
-
-LLM-Project/
-│
-├── notebook/
-│   └── argument_mining_pipeline.ipynb
-│
-├── data/
-│   └── raw/
-│       └── (datasets downloaded automatically by the notebook)
-│
-├── results/
-│   ├── aae_dev_roberta_sanitized.json
-│   ├── abstrct_dev_scibert_linearidx.json
-│   ├── final_results_summary.json
-│   └── experiment_metadata.json
-│
-├── .gitignore
-└── README.md
-
-
----
 
 ## Notebook
 
