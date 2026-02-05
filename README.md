@@ -14,6 +14,7 @@ model training, and evaluation using strict and relaxed metrics.
 ## Repository Structure
 
 LLM-Project/
+│
 ├── notebook/
 │   └── argument_mining_pipeline.ipynb
 │
@@ -29,6 +30,7 @@ LLM-Project/
 │
 ├── .gitignore
 └── README.md
+
 
 ---
 
