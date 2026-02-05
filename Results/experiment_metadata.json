@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-02-05 04:40:52",
+  "datasets": {
+    "AAE": "ArgumentAnnotatedEssays v2.0",
+    "AbstRCT": "AbstRCT_corpus"
+  },
+  "models": {
+    "AAE": {
+      "model": "roberta-base",
+      "task": "token classification",
+      "epochs": 2,
+      "max_length": 256
+    },
+    "AbstRCT": {
+      "model": "allenai/scibert_scivocab_uncased",
+      "task": "token classification",
+      "epochs": 2,
+      "max_length": 256
+    }
+  },
+  "engineering_notes": [
+    "Transformers pinned to 5.0.0 (TrainingArguments uses eval_strategy).",
+    "BIO sanitized (I->B when needed).",
+    "Spans reconstructed from BIO tags before evaluation.",
+    "AbstRCT uses linear token indices for evaluator compatibility.",
+    "Empty-span docs patched with a 1-token fallback span to avoid evaluation crashes."
+  ]
+}

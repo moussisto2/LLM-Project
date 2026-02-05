@@ -1,0 +1,22 @@
+{
+  "AAE": {
+    "Naive sentence": {
+      "strict_f": 0.0,
+      "relaxed_f": 0.165
+    },
+    "RoBERTa": {
+      "strict_f": 0.183,
+      "relaxed_f": 0.352
+    }
+  },
+  "AbstRCT": {
+    "Naive sentence": {
+      "strict_f": 0.114,
+      "relaxed_f": 0.226
+    },
+    "SciBERT": {
+      "strict_f": 0.048,
+      "relaxed_f": 0.347
+    }
+  }
+}
