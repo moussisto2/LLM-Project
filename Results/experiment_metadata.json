@@ -1,28 +1,18 @@
 {
-  "timestamp": "2026-02-05 04:40:52",
+  "timestamp": "2026-02-06 14:49:33",
   "datasets": {
     "AAE": "ArgumentAnnotatedEssays v2.0",
-    "AbstRCT": "AbstRCT_corpus"
+    "AbstRCT": "AbstRCT corpus"
   },
   "models": {
-    "AAE": {
-      "model": "roberta-base",
-      "task": "token classification",
-      "epochs": 2,
-      "max_length": 256
-    },
-    "AbstRCT": {
-      "model": "allenai/scibert_scivocab_uncased",
-      "task": "token classification",
-      "epochs": 2,
-      "max_length": 256
-    }
+    "AAE": "roberta-base (token classification)",
+    "AbstRCT": "allenai/scibert_scivocab_uncased (token classification)"
   },
   "engineering_notes": [
-    "Transformers pinned to 5.0.0 (TrainingArguments uses eval_strategy).",
-    "BIO sanitized (I->B when needed).",
-    "Spans reconstructed from BIO tags before evaluation.",
-    "AbstRCT uses linear token indices for evaluator compatibility.",
-    "Empty-span docs patched with a 1-token fallback span to avoid evaluation crashes."
+    "BIO normalization enforced (I \u2192 B when needed)",
+    "Class-weighted loss to counter O-label dominance",
+    "Max sequence length increased to 512",
+    "Linear token indices required by evaluate.py",
+    "Safe evaluation (division-by-zero protected)"
   ]
 }

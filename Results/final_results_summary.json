@@ -1,22 +1,15 @@
 {
-  "AAE": {
-    "Naive sentence": {
-      "strict_f": 0.0,
-      "relaxed_f": 0.165
-    },
-    "RoBERTa": {
-      "strict_f": 0.183,
-      "relaxed_f": 0.352
-    }
-  },
   "AbstRCT": {
-    "Naive sentence": {
-      "strict_f": 0.114,
-      "relaxed_f": 0.226
+    "model": "allenai/scibert_scivocab_uncased",
+    "pred_spans": 435,
+    "ref_spans": 326,
+    "strict": {
+      "unlabeled_f1": 0.552,
+      "labeled_f1": 0.534
     },
-    "SciBERT": {
-      "strict_f": 0.048,
-      "relaxed_f": 0.347
+    "relaxed": {
+      "unlabeled_f1": 0.652,
+      "labeled_f1": 0.635
     }
   }
 }
